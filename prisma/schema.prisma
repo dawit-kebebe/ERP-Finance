@@ -1,0 +1,117 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "./prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Budget {
+  id            Int         @id @default(autoincrement())
+  budgetCode    BudgetCode? @relation(fields: [budgetCodeId], references: [id])
+  budgetCodeId  Int?
+  amount        Float
+  budgetPlan   BudgetPlan  @relation(fields: [budgetPlanId], references: [id])
+  budgetPlanId Int
+
+  // Inverse relation to BudgetRequest
+  requests BudgetRequest[] @relation("BudgetToRequest")
+}
+
+model BudgetPlan {
+  id          Int    @id @default(autoincrement())
+  tag         String @unique
+  description String
+
+  Budget Budget[]
+}
+
+model BudgetRequest {
+  id       Int    @id @default(autoincrement())
+  uuid     String @unique
+  requestTime DateTime 
+  budget   Budget @relation(name: "BudgetToRequest", fields: [budgetId], references: [id])
+  budgetId Int
+}
+
+// model BudgetRequestFlow {
+//     id                Int    @id @default(autoincrement())
+//     budgetRequest     BudgetRequest @relation(fields: [budgetRequestId], references: [id])
+//     budgetRequestId   Int
+//     approver          User   @relation(fields: [approverId], references: [uuid])
+//     approverId        String
+//     status            String @default("PENDING")
+//     comment           String?
+//     createdAt         DateTime @default(now())
+//     updatedAt         DateTime @updatedAt
+// }
+
+model BudgetCode {
+  id          Int    @id @default(autoincrement())
+  budgetCode  String @unique
+  description String
+
+  Budget Budget[]
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  uuid      String   @unique
+  firstName String
+  lastName  String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  isActive  Boolean  @default(true)
+  // Relations
+
+  role   Role @relation(name: "UserToRole", fields: [roleId], references: [id])
+  roleId Int
+}
+
+model AccessLevel {
+  id          Int          @id @default(autoincrement())
+  title String      @unique
+  description String?
+  uuid        String      @unique
+}
+
+// model Structure {
+//   id         Int          @id @default(autoincrement())
+//   center 
+// }
+
+model Role {
+  name        String       @unique
+  description String?
+  permissions Permission[] @relation("RolePermissions")
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  // Inverse relation to User
+  users User[] @relation("UserToRole")
+}
+
+model Permission {
+  id       Int              @id @default(autoincrement())
+  action   PermissionAction @relation(fields: [actionId], references: [id])
+  actionId Int
+
+  Role Role[] @relation("RolePermissions")
+}
+
+model PermissionAction {
+  id   Int    @id @default(autoincrement())
+  name String @unique
+
+  Permission Permission[]
+}

@@ -1,0 +1,70 @@
+{
+    "login": {
+        "title": "መግቢያ",
+        "email": "ኢሜል",
+        "emailPlaceholder": "bereket@mk.org",
+        "emailError": "እባክዎትን ትክክለኛ ኢሜል ያስገቡ",
+        "password": "የይለፍ ቃል",
+        "passwordError": "የይለፍ ቃል ቢያንስ 6 ፊደላት/ቁጥሮች መሆን አለበት",
+        "passwordPlaceholder": "የይለፍ ቃልዎን ያስገቡ",
+        "submit": "አስገባ",
+        "forgotPassword": "የይለፍ ቃል ረስተዋል?",
+        "rememberMe": "አስታውሰኝ"
+    },
+
+    "landing": {
+        "title": "የማህበረ ቅዱሳን ERP ሲስተም",
+        "description": "የማህበረ ቅዱሳን የግዥ ሂደት፣ የእቃ ክምችት፣ የሽያጭ፣ የገንዘብ መረጃ፣ የሰራተኞች መረጃ፣ ምቹ የሪፖርት ማጠናቀሪያ እና ቀላል በይነገጽ ያለው ERP ሲስተም"
+    },
+
+    "header": {
+        "title": "የማህበረ ቅዱሳን"
+    },
+
+    "dashboard": {
+        "sidebar": {
+            "dashboard": "ሠሌዳ",
+            "budget": "በጀት",
+            "budget_request": "የበጀት ጥያቄ",
+            "budget_plan": "የበጀት እቅድ",
+            "expense_code": "የወጪ ኮድ",
+            "income_code": "የገቢ ኮድ",
+            
+            "procurement": "ግዥ",
+            "purchase": "ግዢ",
+            "purchase_request": "የግዢ ጥያቄ",
+            "suppliers": "አቅራቢዎች",
+
+            "finance": "ፋይናንስ",
+            "bank": "ባንክ",
+            "account_pariod": "የሂሳብ ጊዜ",
+            "charts_of_accounts": "የሂሳብ ሰንጠረዦች",
+            "journal_entries": "ወጪ/ገቢ ዝርዝር",
+
+            "structure": "መዋቅር",
+            "diocese": "ሀገረ ስብከት",
+            "coordination_office": "ማስተባበሪያ ጽ/ቤት",
+            "center": "ማዕከል",
+            "wereda_center": "ወረዳ ማዕከል",
+            "service_department": "የአገልግሎት ክፍል",
+            "coordination": "ማስተባበሪያ",
+
+            "add_role": "ሚና ያክሉ",
+            "add_user": "ተጠቃሚ ያክሉ",
+            "permission": "ፈቃድ",
+            "role_and_sub_menu": "ሚና እና ንዑስ ምናሌ",
+
+            "inventory": "እቃ ቆጠራ",
+            "items": "እቃዎች",
+            "items_category": "የእቃ ምድብ",
+            "unit_of_measure": "መለኪያ",
+            "store": "መደብር",
+
+            "settings": "መቼቶች"
+        }
+    },
+
+    "footer": {
+        "copyright": "© ማህበረ ቅዱሳን፣ ሁሉም መብቶች በህግ የተጠበቁ ናቸው።"
+    }
+}

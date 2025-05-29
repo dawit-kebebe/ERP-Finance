@@ -1,0 +1,70 @@
+{
+    "login": {
+        "title": "Login",
+        "email": "Your email",
+        "emailPlaceholder": "bereket@mk.org",
+        "emailError": "Please enter a valid email address",
+        "password": "Your password",
+        "passwordError": "Password must be at least 6 characters",
+        "passwordPlaceholder": "Enter your password",
+        "submit": "Submit",
+        "forgotPassword": "Forgot your password?",
+        "rememberMe": "Remember Me"
+    },
+
+    "dashboard": {
+        "sidebar": {
+            "dashboard": "Dashboard",
+            "budget": "Budget",
+            "budget_request": "Budget Request",
+            "budget_plan": "Budget Plan",
+            "expense_code": "Expense Code",
+            "income_code": "Income Code",
+            
+            "procurement": "Procurement",
+            "purchase": "Purchase",
+            "purchase_request": "Purchase Request",
+            "suppliers": "Suppliers",
+
+            "finance": "Finance",
+            "bank": "Bank",
+            "account_pariod": "Account Period",
+            "charts_of_accounts": "Charts of Accounts",
+            "journal_entries": "Journal Entries",
+
+            "structure": "Structure",
+            "diocese": "Diocese",
+            "coordination_office": "Coordination Office",
+            "center": "Center",
+            "wereda_center": "Wereda Center",
+            "service_department": "Service Department",
+            "coordination": "Coordination",
+
+            "add_role": "Add Role",
+            "add_user": "Add User",
+            "permission": "Permission",
+            "role_and_sub_menu": "Role & Sub-Menu",
+
+            "inventory": "Inventory",
+            "items": "Items",
+            "items_category": "Items Category",
+            "unit_of_measure": "Unit of Measure",
+            "store": "Store",
+
+            "settings": "Settings"
+        }
+    },
+
+    "landing": {
+        "title": "Mahibere Kidusan ERP System",
+        "description": "An all-in-one ERP system for Mahibere Kidusan to manage procurement, inventory, sales, accounting, HR, and more with powerful reporting and a user-friendly interface."
+    },
+
+    "header": {
+        "title": "Mahibere Kidusan"
+    },
+
+    "footer": {
+        "copyright": "© Mahibere Kidusan, All rights reserved."
+    }
+}
